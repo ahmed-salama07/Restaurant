@@ -434,21 +434,15 @@ header {
     margin-left: 20px;
 }
 
-.menu .container .menu-plates .plates .heart {
+.menu .container .menu-plates .plates .heart i {
     position: absolute;
     top: 7%;
     right: 10%;
     background-color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    text-align: center;
-    cursor: pointer;
-}
-
-.menu .container .menu-plates .plates .heart i {
     color: black;
-    margin: 4px auto;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .menu .container .menu-plates .plates .heart:hover i {
