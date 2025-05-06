@@ -1,3 +1,5 @@
+/* Start Variables */
+
 :root {
     --padding-section: 100px;
     --green-color: rgb(43, 171, 100);
@@ -5,6 +7,9 @@
     --gray: rgb(199, 199, 199);
 }
 
+/* End Variables */
+
+/* Start Global */
 
 * {
     box-sizing: border-box;
@@ -49,14 +54,16 @@ ul {
     padding-right: 50px;
 }
 
-.main-page {
-    /* padding-bottom: var(--padding-section); */
-}
+/* End Global */
+
+
+/* Start Header */
 
 .main-page header .container img {
     max-width: 100%;
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
 
 
@@ -102,15 +109,16 @@ header {
     text-decoration: none;
 }
 
-
-
-
 .main-page header .container nav ul li:hover,
 .main-page header .container nav ul li.active,
 .main-page header .container nav ul li:hover a {
     background-color: var(--green-color);
     color: white;
     border-radius: 10px;
+}
+
+.main-page header .container .font-logos {
+    cursor: pointer;
 }
 
 .main-page header .container .font-logos i {
@@ -153,7 +161,10 @@ header {
     }
 }
 
+/* End Header */
 
+
+/* Start Home */
 .main-page .home {
     margin-top: 10px;
     background-color: white;
@@ -238,6 +249,9 @@ header {
     background-color: var(--green-color);
 }
 
+/* End Home */
+
+/* Start Popular Dishes */
 
 .popular-dishes .container .dish-images {
     display: grid;
@@ -293,6 +307,11 @@ header {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* End Popular Dishes */
+
+
+/* Start About */
 
 .about {
     margin-top: 100px;
@@ -389,7 +408,12 @@ header {
     margin-bottom: 10px;
 }
 
-.menu .container .menu-images {
+/* End About */
+
+/* Start Menu */
+
+
+.menu .container .menu-plates {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -398,53 +422,75 @@ header {
 }
 
 @media (max-width: 920px) {
-    .menu .container .menu-images {
+    .menu .container .menu-plates {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
 
-.menu .container .menu-images .plates {
+.menu .container .menu-plates .plates {
     background-color: white;
     padding-left: 15px;
     position: relative;
     margin-left: 20px;
 }
 
-.menu .container .menu-images .plates img {
-    width: 90%;
+.menu .container .menu-plates .plates .heart {
+    position: absolute;
+    top: 7%;
+    right: 10%;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu .container .menu-plates .plates .heart i {
+    color: black;
+    margin: 4px auto;
+}
+
+.menu .container .menu-plates .plates .heart:hover i {
+    color: red;
+}
+
+.menu .container .menu-plates .plates img {
+    width: 95%;
     height: 250px;
-    margin: 20px 20px 10px 0;
+    margin: 20px 0 10px 0;
     max-width: 100%;
     /* border-radius: 50%; */
     display: block;
+    /* text-align: center; */
 }
 
-.menu .container .menu-images .plates h4 {
+.menu .container .menu-plates .plates h4 {
     color: var(--blue-color);
     margin: 5px;
 }
 
-.menu .container .menu-images .plates p {
+.menu .container .menu-plates .plates p {
     color: var(--gray);
     line-height: 1.4;
     margin-bottom: 15px;
 }
 
-.menu .container .menu-images .plates i {
+.menu .container .menu-plates .plates i {
     margin-bottom: 10px;
     color: var(--green-color);
 }
 
-.menu .container .menu-images .plates .price {
+.menu .container .menu-plates .plates .price {
     margin-bottom: 10px;
 }
 
-.menu .container .menu-images .plates .price span {
+.menu .container .menu-plates .plates .price span {
     color: var(--green-color);
     margin-left: 10px;
 }
 
-.menu .container .menu-images .plates .price button {
+.menu .container .menu-plates .plates .price button {
     border: none;
     color: white;
     padding: 5px 10px;
@@ -452,3 +498,5 @@ header {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* End Menu */
